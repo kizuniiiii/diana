@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     padding: 1rem 10% 0;
     background-image: url(img/fon.jpg);
-    font-family: fantasy;
+    font-family:serif;
 }
 
 header {
@@ -39,12 +39,58 @@ main {
     background-position: bottom;
     background-position: top;
     flex: 1;
-    align-items: center;
     flex-direction: column;
     width: 100%;
     display: flex;
     padding: 1rem 2rem 1rem;
     gap: 1rem;
-    color: lemonchiffon;
+    color: rgb(235, 235, 214);
     overflow: hidden;
+}
+
+.jokes_container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    overflow: auto;
+}
+.jokes_container::-webkit-scrollbar {
+    width: 1-px;
+}
+
+.jokes_container::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 235, 214);
+    border-radius: 1rem;
+}
+
+.joke {
+    padding: 1rem 1rem 0.25rem;
+    margin: 1rem;
+    background-color:rgba(235, 235, 214, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    color: rgb(215, 83, 133);
+    /* height: 40%; */
+}
+
+.joke_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.joke_likes {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.joke_btn {
+    background: 0;
+    border: 0;
+    color: rgb(215, 83, 133);
+    cursor: pointer;
 }
